@@ -1,0 +1,122 @@
+.page-cart{
+	& .section-content{
+		@media(--pad){
+			display: flex;
+			width: calc(100% - 100px);
+			margin: 30px auto 30px auto;
+		}
+		@media(--desktop){
+			width: 940px;
+		}
+		& .shopping-list{
+			@media(--pad){
+				width: 50%;
+				margin-right: 20px;
+			}
+			@media(--desktop){
+				width: 620px;
+			}
+			& .title{
+				width: 100%;
+				height: 65px;
+				background-color: var(--lg);
+				text-align: center;
+				& span{
+					font-size: 24px;
+					line-height: 65px;
+					font-weight: bold;
+					color: var(--main);
+				}
+			}
+		}
+		& .paid{
+			@media(--pad){
+				width: 50%;
+			}
+			@media(--desktop){
+				width: 300px;
+			}
+			& .panel-top{
+				padding-bottom: 16px;
+				@media(--pad){
+					background-color: var(--main);
+				}
+				& .title{
+					width: calc(100% - 60px);
+					height: 65px;
+					margin: 0 auto 16px auto;
+					text-align: center;
+					background-color: var(--lg);
+					@media(--pad){
+						background-color: transparent;
+						border-bottom: 1px solid #fff;
+						width: calc(100% - 36px);
+					}
+					& span{
+						color: var(--main);
+						font-size: 24px;
+						line-height: 65px;
+						font-weight: bold;
+						@media(--pad){
+							color: #fff;
+						}
+					}
+				}
+				& .price{
+					width: calc(100% - 60px);
+					margin: 0 auto 16px auto;
+					display: flex;
+					justify-content: space-between;
+					@media(--pad){
+						width: calc(100% - 36px);
+					}
+					& span{
+						color: var(--main);
+						font-weight: 300;
+						font-size: 16px;
+						@media(--pad){
+							color: #fff;
+						}
+					}
+				}
+				& .price:nth-child(2){
+					margin: 0 auto 8px auto;
+				}
+				& .total{
+					margin: 0 auto 16px auto;
+					display: -webkit-flex;
+					display: -moz-flex;
+					display: -ms-flex;
+					display: -o-flex;
+					display: flex;
+					justify-content: space-between;
+					width: calc(100% - 60px);
+					@media(--pad){
+						width: calc(100% - 36px);
+					}
+					& span{
+						font-size: 20px;
+						color: var(--main);
+						font-weight: bold;
+						@media(--pad){
+							color: #fff;
+						}
+					}
+				}
+			}
+			& .panel-bottom{
+				width: 100%;
+				height: 65px;
+				background-color: var(--yellow);
+				text-align: center;
+				cursor: pointer;
+				& span{
+					font-size: 24px;
+					line-height: 65px;
+					color: var(--main);
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}

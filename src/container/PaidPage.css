@@ -1,0 +1,380 @@
+.page-paid{
+	& .section-content{
+		@media(--pad){
+			display: flex;
+			padding: 0 50px;
+			margin-bottom: 60px;
+		}
+		@media(--desktop){
+			padding: 0;
+			justify-content: center;
+		}
+		& .paid-info{
+			background-color: var(--main);
+			padding: 30px;
+			padding-bottom: 0;
+		    height: fit-content;
+			@media(--pad){
+				width: calc(( 100% - 30px )/2);
+				margin-right: 30px;
+			}
+			@media(--desktop){
+				width: 460px;
+			}
+			& .paid-title{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 30px;
+				& .title{
+					& span{
+						font-size: 36px;
+						color: var(--lg);
+						font-weight: bold;
+					}
+				}
+				& .processbar{
+					display: flex;
+					justify-content: center;
+					-ms-align-items: center;
+					align-items: center;
+					& .circle{
+						width: 16px;
+						height: 16px;
+						border: 1px solid var(--lg);
+						border-radius: 50%;
+						position: relative;
+						@media(--desktop){
+							width: 20px;
+							height: 20px;
+						}
+					}
+					& .stright{
+						width: 51px;
+						height: 1px;
+						background-color: var(--lg);
+						@media(--desktop){
+							width: 60px;
+						}
+					}
+					& .circle.now{
+						&:after{
+							content: '';
+							width: 10px;
+							height: 10px;
+							border-radius: 50%;
+							background-color: var(--lg);
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+							@media(--desktop){
+								width: 14px;
+								height: 14px;
+							}
+						}
+					}
+					& .circle.sucess{
+						background-color: var(--lg);
+						&:before, &:after{
+							content: '';
+							height: 2px;
+							background-color: var(--main);
+							position: absolute;
+							left: 50%;
+							top: 50%;
+						}
+						&:before{
+							width: 6px;
+							transform: rotate(45deg) translate(-4px, 5px);
+						}
+						&:after{
+							width: 10px;
+							transform: rotate(-45deg) translate(-2px, -3px);
+						}
+					}
+				}
+			}
+		}
+		
+		& .form-wrapper{
+			
+			& .input{
+				& span{
+					font-size: 20px;
+					margin-bottom: 8px;
+					display: block;
+					color: var(--lg);
+				}
+				& input, & select{
+					background-color: var(--lg);
+					color: var(--green);
+					height: 56px;
+					padding: 16px 20px;
+					width: 100%;
+					font-family: "Noto Sans TC", sans-serif;
+				}
+				& input{
+					&::placeholder {
+						color: var(--green);
+						font-family: "Noto Sans TC", sans-serif;
+					}
+				}
+				& select{
+					& option{
+						background-color: var(--lg);
+					}
+				}
+			}
+			& .address{
+				& .title{
+					& span{
+						font-size: 20px;
+						margin-bottom: 8px;
+						display: block;
+						color: var(--lg);
+					}
+				}
+				& .option{
+					display: -webkit-flex;
+					display: -moz-flex;
+					display: -ms-flex;
+					display: -o-flex;
+					display: flex;
+					margin-bottom: 9px;
+					& .input{
+						width: calc((100% - 9px)/2);
+					}
+					& .input:first-child{
+						margin-right: 9px;
+					}
+				}
+			}
+			& .btn{
+				width: calc(100% + 60px);
+				position: relative;
+				left: -30px;
+				height: 65px;
+				background-color: var(--yellow);
+				text-align: center;
+				cursor: pointer;
+				margin-top: 30px;
+				& span{
+					font-size: 24px;
+					font-weight: bold;
+					color: var(--main);
+					line-height: 65px;
+				}
+			}
+			& .name, & .phone, & .address,
+			& .card, & .card-name, & .timelimit, & .num,
+			& .option-e-ticket>*, & .option-mail>*
+			{
+				margin-bottom: 16px;
+			}
+
+			& .form-info{
+				& .name{
+					display: flex;
+					& .input{
+						width: calc((100% - 9px)/2);
+					}
+					& .input:first-child{
+						margin-right: 9px;
+					}
+				}
+			}
+			& .form-card{
+				& .card{
+					& input{
+						width: calc(100% - 56px);
+						display: inline-block;
+						padding-right: 0;
+					}
+					& .icon{
+						background-color: var(--lg);
+						height: 56px;
+						width: 56px;
+						text-align: center;
+						display: inline-block;
+						transform: translateY(-1px);
+						& i{
+							color: var(--main);
+							line-height: 56px;
+						}
+					}
+				}
+				& .card-name{
+					display: -webkit-flex;
+					display: -moz-flex;
+					display: -ms-flex;
+					display: -o-flex;
+					display: flex;
+					flex-wrap: wrap;
+					& input{
+						width: calc((100% - 9px)/2);
+					}
+					& input:first-of-type{
+						margin-right: 9px;
+					}
+					& span{
+						width: 100%;
+					}
+				}
+				& .timelimit{
+					& select{
+						width: calc((100% - 9px)/2);
+					}
+					& select:first-of-type{
+						margin-right: 9px;
+					}
+				}
+			}
+			& .form-receipt{
+				& .tab-options{
+					display: -webkit-flex;
+					display: -moz-flex;
+					display: -ms-flex;
+					display: -o-flex;
+					display: flex;
+					& .option{
+						text-align: center;
+						border: 1px solid var(--lg);
+						width: 50%;
+						margin-bottom: 30px;
+						cursor: pointer;
+						& span{
+							font-size: 20px;
+							color: var(--lg);
+							line-height: 56px;
+							font-weight: bold;
+						}
+					}
+					& .option.pick{
+						background-color: var(--lg);
+						& span{
+							color: var(--main);
+						}
+					}
+				}
+				& .option-e-ticket.visible{
+					display: block;
+				}
+				& .option-mail.visible{
+					display: block;
+					
+				}
+			}
+			& .visible{
+				display: block;
+			}
+			& .option-e-ticket, & .option-mail{
+				display: none;
+			}
+		}
+		& .paid-content{
+			display: none;
+			@media(--pad){
+				display: block;
+				width: calc(( 100% - 30px )/2);
+			}
+			@media(--desktop){
+				width: 300px;
+			}
+			& .title{
+				width: 100%;
+				background-color: var(--lg);
+				height: 65px;
+				text-align: center;
+				& span{
+					font-size: 24px;
+					color: var(--green);
+					line-height: 65px;
+					font-weight: bold;
+				}
+			}
+			& .paid-price{
+				border: 1px solid var(--lg);
+				& .text-wrapper{
+					padding: 16px 20px;
+					& .text{
+						display: -webkit-flex;
+						display: -moz-flex;
+						display: -ms-flex;
+						display: -o-flex;
+						display: flex;
+						justify-content: space-between;
+						margin-bottom: 8px;
+						& span{
+							color: var(--green);
+							font-weight: 300;
+							color: 16px;
+						}
+					}
+					& .text:nth-child(2){
+						margin-bottom: 16px;
+					}
+					& .total{
+						display: -webkit-flex;
+						display: -moz-flex;
+						display: -ms-flex;
+						display: -o-flex;
+						display: flex;
+						justify-content: space-between;
+						margin-bottom: 8px;
+						& span{
+							color: var(--green);
+							font-weight: bold;
+							font-size: 20px;
+						}
+					}
+				}
+			}
+			& .shopping-list{
+				border: 1px solid var(--lg);
+				
+				& .shoppinglist-stuff-wrapper{
+					padding: 16px 20px;
+					& .shoppinglist-stuff{
+						margin-bottom: 16px;
+						display: -webkit-flex;
+						display: -moz-flex;
+						display: -ms-flex;
+						display: -o-flex;
+						display: flex;
+						-ms-align-items: center;
+						align-items: center;
+						& .stuff-img{
+							width: 120px;
+							height: 80px;
+							margin-right: 20px;
+							-webkit-background-size: cover;
+							background-size: cover;
+						}
+						& .stuff-name{
+							& span{
+								color: var(--green);
+								font-weight: 300;
+								font-size: 16px;
+								line-height: 24px;
+								display: block;
+							}
+							& span.price{
+								font-weight: bolder;
+								font-size: 20px;
+							}
+						}
+					}
+					& .shoppinglist-stuff:last-child{
+						margin-bottom: 0;
+					}
+				}
+				
+			}
+		}
+
+		& .form-info, & .form-card, & .form-receipt{
+			display: none;
+		}
+	}
+}

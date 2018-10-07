@@ -1,0 +1,142 @@
+.stuff{
+	width: calc(100% - 66px);
+	margin: 0 auto;
+	margin-bottom: 30px;
+	@media(--pad){
+		width: calc((100% -100px)/2);
+		margin: 0;
+		margin-right: 20px;
+	}
+	& .stuff-img{
+		width: 100%;
+		height: 315px;
+		position: relative;
+		overflow: hidden;
+		& .img{
+			width: 100%;
+			height: 100%;
+			-webkit-background-size: cover;
+			background-size: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: .5s;
+		}
+
+		& .todaypick{
+			width: 35px;
+			height: 105px;
+			background-color: var(--main);
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+			position: absolute;
+			left: 21px;
+			& span{
+				color: #fff;
+				writing-mode: vertical-lr;
+				font-size: 16px;
+				font-weight: 300;
+				letter-spacing: 2px;
+			}
+		}
+		& .like{
+			position: absolute;
+			right: 24px;
+			top: 20px;
+			cursor: pointer;
+			& .fa-heart{
+				font-size: 20px;
+				color: var(--main);
+				transition: .2s;
+			}
+			& .fas{
+				color: #ff4f66;
+				animation: heartBigger 1s;
+			}
+			
+		}
+	}
+	& .stuff-title{
+		width: 100%;
+		border-collapse: collapse;
+		& span{
+			font-size: 20px;
+			color: var(--main);
+			font-weight: 300;
+			border-left: 1px solid #EAF0ED;
+			border-right: 1px solid #EAF0ED;
+			width: 60%;
+			display: inline-block;
+			text-align: center;
+			padding: 13px 0;
+		}
+		& .price{
+			font-weight: bold;
+			width: 40%;
+		}
+	}
+	& .btn{
+		background-color: #EAF0ED;
+		width: 100%;
+		height: 65px;
+		font-size: 24px;
+		line-height: 65px;
+		text-align: center;
+		color: var(--main);
+		cursor: pointer;
+		position: relative;
+		transition: .1s;
+		z-index: 10;
+		&:after{
+			content: '';
+			transition: .3s ease-in-out;
+			background-color: var(--main);
+			width: 0;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+	}
+}
+
+
+.desktop{
+	& .stuff{
+		& .stuff-img{
+			&:hover{
+				& .img{
+					transform: scale(1.2);
+					transition: .5s;
+				}
+			}
+		}
+		& .btn{
+			&:hover{
+				color: #fff;
+				transition: .1s;
+				&:after{
+					width: 100%;
+					transition: .3s ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+@keyframes heartBigger{
+	from{
+		transform: scale(1.2);
+	}
+	to{
+		transform: scale(1);
+	}
+}

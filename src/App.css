@@ -1,0 +1,60 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css?family=Barlow');
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+
+html, body{
+    font-family: "Noto Sans TC", "Microsoft JhengHei", "HanHei TC", "MHei", "PingFang TC", "STHeitiTC-Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+input, textarea , button, submit {
+    appearance: none;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+
+}
+
+ul {
+    /* list-style-type: none; */
+    margin: 0;
+    /* padding: 0; */
+}
+
+*{
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.desktop{
+    display: none;
+    @media(--desktop){
+        display: block;
+    }
+}
+
+.mobile{
+    @media(--desktop){
+        display: none;
+    }
+}
+
+.page{
+    padding-top: 80px;
+    @media(--desktop){
+        padding-top: 100px;
+    }
+}

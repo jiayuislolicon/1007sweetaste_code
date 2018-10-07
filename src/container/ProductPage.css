@@ -1,0 +1,152 @@
+.page-product{
+	position: relative;
+	& .section-cover{
+		position: relative;
+		@media(--desktop){
+			width: 940px;
+			height: 496px;
+			margin: 0 auto 60px auto;
+		}
+		& .cover{
+			width: 100%;
+			height: 277px;
+			-webkit-background-size: cover;
+			background-size: cover;
+			@media(--pad){
+				height: 380px;
+			}
+			@media(--desktop){
+				height: 496px;
+			}
+		}
+		& .titletext{
+			width: 60px;
+			position: absolute;
+			right: 30px;
+			top: 30px;
+			@media(--desktop){
+				width: 89px;
+				right: 40px;
+				top: 40px;
+			}
+			& img{
+				width: 100%;
+			}
+		}
+	}
+	& .section-content{
+		margin-bottom: 30px;
+		@media(--desktop){
+			display: flex;
+			justify-content: center;
+			width: 940px;
+			margin: 0 auto 60px auto;
+		}
+		& .navi{
+			margin-bottom: 30px;
+			border-collapse: collapse;
+			@media(--desktop){
+				width: 300px;
+			}
+			& li{
+				list-style: none;
+				width: 100%;
+				height: 65px;
+				text-align: center;
+				border: 1px solid #EAF0ED;
+				cursor: pointer;
+				& span{
+					font-size: 20px;
+					line-height: 65px;
+					letter-spacing: .5px;
+					color: var(--main);
+					font-weight: bold;
+				}
+				&:hover{
+					background-color: #EAF0ED;
+				}
+			}
+			& li:first-of-type{
+				background-color: var(--main);
+				& span{
+					color: #fff;
+				}
+			}
+		}
+		& .stuff-wrapper{
+			& .stuff-content{
+				display: flex;
+				flex-direction: column;
+				-ms-align-items: center;
+				align-items: center;
+				justify-content: center;
+				@media(--pad){
+					flex-direction: row;
+					flex-wrap: wrap;
+				}
+				@media(--desktop){
+					width: 640px;
+					justify-content: flex-end;
+				}
+				& .stuff{
+					margin: 0;
+					margin-bottom: 30px;
+					@media(--pad){
+						margin-right: 25px;
+					}
+					@media(--desktop){
+						width: 300px;
+					}
+				}
+				& .stuff:nth-child(even){
+					margin-right: 0;
+				}
+			}
+			& .pagenum{
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				-ms-align-items: center;
+				align-items: center;
+				justify-content: center;
+				@media(--desktop){
+					justify-content: flex-end;
+				}
+				& .num{
+					width: 60px;
+					height: 60px;
+					text-align: center;
+					border: 1px solid #EAF0ED;
+					cursor: pointer;
+					& span,& i{
+						font-size: 20px;
+						line-height: 60px;
+						color: var(--main);
+					}
+					&:hover{
+						background-color: #EAF0ED;
+					}
+				}
+				& .prev{
+					& i{
+						transform: rotate(-90deg) translateY(4px);
+					}
+					
+				}
+				& .next{
+					& i{
+						transform: rotate(90deg) translateY(4px);
+					}
+				}
+				& .now{
+					background-color: var(--main);
+					& span{
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
