@@ -24,7 +24,7 @@ export default class IndexPage extends React.Component {
         	<div className="section-index">
         		<div className="cover" style={{ backgroundImage: `url(${process.env.PUBLIC_PATH}asset/pic/1.jpg)` }}></div>
         		<ul className="option">
-        			<li><Link to ='/product'>jjjjj
+        			<li><Link to ='/product'>
         				<img src={`${process.env.PUBLIC_PATH}asset/pic/2.jpg`}/>
         				<span>本日精選</span>
         			</Link></li>
